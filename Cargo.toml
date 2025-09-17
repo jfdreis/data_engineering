@@ -1,0 +1,6 @@
+[workspace]
+members = [
+    "Module_1"
+]
+
+[workspace.dependencies]

@@ -1,0 +1,5 @@
+# Ignore root target folder
+/target
+
+# Ignore all target folders in sub-crates
+**/target/
