@@ -3,6 +3,9 @@
   "build": {
     "dockerfile": "Dockerfile"
   },
+  "features": {
+    "ghcr.io/devcontainers/features/rust:1": {}
+  },
   "workspaceFolder": "/workspaces/data_engineering",
   "customizations": {
     "vscode": {
@@ -13,5 +16,5 @@
     }
   },
   "forwardPorts": [],
-  "postCreateCommand": "source $HOME/.cargo/env && cargo install cargo-watch"
+  "postCreateCommand": "cargo install cargo-watch"
 }
