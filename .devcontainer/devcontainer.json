@@ -1,0 +1,17 @@
+{
+  "name": "Rust Workspace",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "workspaceFolder": "/workspaces/data_engineering",
+  "customizations": {
+    "vscode": {
+      "settings": {},
+      "extensions": [
+        "rust-lang.rust-analyzer"
+      ]
+    }
+  },
+  "forwardPorts": [],
+  "postCreateCommand": "source $HOME/.cargo/env && cargo install cargo-watch"
+}
