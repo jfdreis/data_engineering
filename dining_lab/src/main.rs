@@ -71,13 +71,12 @@ impl Philosopher {
 }
 
 fn main() {
-    
     let num_philosophers = 20;
     let num_forks = 20;
 
-    
-    println!("Dining Philosophers Problem:  {} Philosophers, {} Forks...Yikes!!",
-        num_philosophers, num_forks);
+    println!(
+        "Dining Philosophers Problem:  {num_philosophers} Philosophers, {num_forks} Forks...Yikes!!",
+    );
 
     //we only have 4 forks at the table
     let forks = (0..num_forks)
@@ -88,12 +87,17 @@ fn main() {
             })
         })
         .collect::<Vec<_>>();
-    
+
     let philosophers = (0..num_philosophers)
         .map(|id| {
             let left = id % num_forks as usize;
             let right = (id + 1) % num_forks as usize;
-            Philosopher::new(id as u32, &format!("Philosopher {}", id), Arc::clone(&forks[left]), Arc::clone(&forks[right]))
+            Philosopher::new(
+                id as u32,
+                &format!("Philosopher {id}"),
+                Arc::clone(&forks[left]),
+                Arc::clone(&forks[right]),
+            )
         })
         .collect::<Vec<_>>();
 
