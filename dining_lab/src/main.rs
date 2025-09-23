@@ -50,7 +50,7 @@ impl Philosopher {
     }
 
     fn eat(&self) {
-        let (first_fork, second_fork) = if self.id % 2 == 0 {
+        let (first_fork, second_fork) = if self.id.is_multiple_of(2) {
             (&self.left_fork, &self.right_fork)
         } else {
             (&self.right_fork, &self.left_fork)
