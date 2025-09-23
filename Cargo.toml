@@ -1,6 +1,7 @@
 [workspace]
 members = [
     "Module_1"
-]
+, "csv-demo", "dining_lab"]
 
 [workspace.dependencies]
+rayon = "1.11.0"
